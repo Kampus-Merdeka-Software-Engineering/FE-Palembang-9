@@ -1,11 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>English Galaxy</title>
+    <link rel="stylesheet" href="home.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- navbar -->
+    <section id="navigationbar">
+      <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="#"
+            ><img src="aset/Logo.svg" alt="Logo"
+          /></a>
+          <form role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+          </form>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link me-4" aria-current="page" href="#">Blog</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link me-4" href="#">About Us</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link me-4 dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Category
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Sekolah Dasar</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      >Sekolah Menengah Pertama</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Sekolah Menengah Atas</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link me-4">Carrer</a>
+              </li>
+            </ul>
+            <a href="" class="nav-link me-4"
+              ><button class="btn btn-primary">Sign In</button></a
+            >
+          </div>
+        </div>
+      </nav>
+    </section>
+    <!-- end navbar -->
+    <!-- hero section / landing page -->
+    <section id="hero">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-5 d-flex align-items-center">
+            <div>
+              <h1>
+                Start your journey <br />
+                with <span class="biru">English Galaxy</span>
+              </h1>
+              <p>
+                "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam
+                asperiores dolore reprehenderit ab dolorum nam? Consectetur
+                incidunt numquam nam officiis asperiores voluptatem, perferendis
+                labore aut distinctio, fuga aliquid, et ullam
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-7">
+            <div class="gone">
+              <img src="aset/HeroImage.png" width="100%" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end hero section / landing page -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
