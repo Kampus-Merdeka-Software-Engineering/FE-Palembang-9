@@ -891,6 +891,7 @@ iframe {
 
 .login .btn{
     height: 38px;
+    text-decoration: none;
     background: #f7941d;
     color: #fff;
     font-size: 18px;
@@ -923,6 +924,11 @@ iframe {
     text-decoration: none;
     font-weight: 600;
     transition: 0.3s ease;
+}
+.register-link a{
+    text-decoration: none;
+    color: rgb(5, 5, 191);
+    font-weight: bold;
 }
 
 .register-link p a:hover{
