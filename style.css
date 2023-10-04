@@ -723,7 +723,6 @@ iframe {
 }
 
 .main-tips p{
-    font-family:cursive;
     color: white;
 }
 
@@ -754,7 +753,6 @@ iframe {
 }
 
 .main-tips tr{
-    font-family: cursive;
     margin-top: 20px;
 }
 
@@ -820,7 +818,7 @@ iframe {
   }
 
   #gantiwarna {
-    color: rgba(255, 0, 0, 0.87);
+    color: white;
     animation: shine 2s infinite; /* Menggunakan animasi shine selama 2 detik secara terus-menerus */
   }
 
