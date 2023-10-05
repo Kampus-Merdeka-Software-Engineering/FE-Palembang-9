@@ -385,11 +385,13 @@ body {
     border-radius: 5px;
 }
 .right-image img{
+    width: 100%;
      height: 100%;
      cursor: pointer;
 }
 
 .left-section img{
+    width: 100%;
     cursor: pointer;
 }
 
@@ -594,7 +596,11 @@ h2{
 .banner_container{
     display: flex;
     justify-content: center;
+<<<<<<< HEAD
     
+=======
+    align-items: center;
+>>>>>>> a98145da6d1f0389439b0c93eb812bb1d6915a58
 }
 .main-category .content{
     margin: 0 200px;
@@ -788,7 +794,6 @@ iframe {
 }
 
 .main-tips p{
-    font-family:cursive;
     color: white;
     margin-left: 20px;
 }
@@ -820,7 +825,6 @@ iframe {
 }
 
 .main-tips tr{
-    font-family: cursive;
     margin-top: 20px;
 }
 
@@ -886,7 +890,7 @@ iframe {
   }
 
   #gantiwarna {
-    color: rgba(255, 0, 0, 0.87);
+    color: white;
     animation: shine 2s infinite; /* Menggunakan animasi shine selama 2 detik secara terus-menerus */
   }
 
@@ -957,6 +961,7 @@ iframe {
 
 .login .btn{
     height: 38px;
+    text-decoration: none;
     background: #f7941d;
     color: #fff;
     font-size: 18px;
@@ -989,6 +994,11 @@ iframe {
     text-decoration: none;
     font-weight: 600;
     transition: 0.3s ease;
+}
+.register-link a{
+    text-decoration: none;
+    color: rgb(5, 5, 191);
+    font-weight: bold;
 }
 
 .register-link p a:hover{
@@ -1286,12 +1296,8 @@ iframe {
         width: 30%;
     }
 }
-@media only screen and (max-width: 480px) {
-    .header-content {
-        flex-direction: column;
-        align-items: center;
-    }
 
+<<<<<<< HEAD
     .left-section {
         margin: 0;
     }
@@ -1325,6 +1331,8 @@ iframe {
         margin-top: 0;
     }
 }
+=======
+>>>>>>> a98145da6d1f0389439b0c93eb812bb1d6915a58
 /*responsif untuk footer*/
     @media (max-width: 768px) {
         .footer-column {
@@ -1698,11 +1706,63 @@ iframe {
 }
 
  /*responsive untuk login*/
+<<<<<<< HEAD
  @media only screen and (min-width: 600px) {
+=======
+ @media (max-width: 768px) {
+    .login {
+        width: 80%;
+        height: auto;
+        padding: 30px;
+    }
+
+    .login .avatar {
+        width: 60px;
+        height: 60px;
+        top: -10%;
+        left: calc(50% - 30px);
+    }
+
+    .login h1 {
+        font-size: 18px;
+    }
+
+    .login input {
+        margin-bottom: 15px;
+    }
+
+    .form-input {
+        height: 35px;
+    }
+
+    .login .btn {
+        height: 32px;
+        font-size: 16px;
+    }
+
+    .login a {
+        font-size: 11px;
+        line-height: 18px;
+    }
+
+    .register-link {
+        font-size: 12px;
+        margin-top: 15px;
+    }
+
+    .register-link p a {
+        font-size: 13px;
+    }
+}
+
+/* Tambahan untuk tata letak responsif pada perangkat laptop (lebar 992px) */
+@media (min-width: 769px) and (max-width: 992px) {
+>>>>>>> a98145da6d1f0389439b0c93eb812bb1d6915a58
     .login {
         max-width: 400px;
     }
 
+<<<<<<< HEAD
     .login input {
         height: 45px;
     }
@@ -1731,13 +1791,33 @@ iframe {
 @media only screen and (min-width: 1200px) {
     .login {
         max-width: 600px;
+=======
+    .login .avatar {
+        width: 70px;
+        height: 70px;
+        top: -15%;
+        left: calc(50% - 35px);
+>>>>>>> a98145da6d1f0389439b0c93eb812bb1d6915a58
     }
 
     .login h1 {
         font-size: 20px;
+<<<<<<< HEAD
+=======
+        margin-bottom: 20px;
+>>>>>>> a98145da6d1f0389439b0c93eb812bb1d6915a58
+    }
+
+    .login input {
+        margin-bottom: 25px;
+    }
+
+    .form-input {
+        height: 40px;
     }
 
     .login .btn {
+<<<<<<< HEAD
         font-size: 18px;
     }
 
@@ -1745,3 +1825,24 @@ iframe {
         height: 50px;
     }
 }
+=======
+        height: 35px;
+        font-size: 17px;
+    }
+
+    .login a {
+        font-size: 12px;
+        line-height: 20px;
+    }
+
+    .register-link {
+        font-size: 14px;
+        margin-top: 25px;
+    }
+
+    .register-link p a {
+        font-size: 15px;
+    }
+}
+ 
+>>>>>>> a98145da6d1f0389439b0c93eb812bb1d6915a58
