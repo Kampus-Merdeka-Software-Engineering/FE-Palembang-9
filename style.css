@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins&display=swap');
 /* Menghilangkan margin dan padding pada beberapa elemen kunci */
-html, body, ul, ol, li, form, fieldset, legend {
+-html, body, ul, ol, li, form, fieldset, legend {
     margin:0;
     padding:0;
     }
@@ -391,7 +391,7 @@ body {
 }
 
 .left-section img{
-    width: 100%;
+    
     cursor: pointer;
 }
 
@@ -596,11 +596,9 @@ h2{
 .banner_container{
     display: flex;
     justify-content: center;
-<<<<<<< HEAD
-    
-=======
+
     align-items: center;
->>>>>>> a98145da6d1f0389439b0c93eb812bb1d6915a58
+
 }
 .main-category .content{
     margin: 0 200px;
@@ -1211,6 +1209,10 @@ iframe {
         max-width: 90px;
         
     }
+    .sign-in-button {
+        margin-right: 30px; 
+        display: block;
+    }
 }
 
 
@@ -1297,42 +1299,6 @@ iframe {
     }
 }
 
-<<<<<<< HEAD
-    .left-section {
-        margin: 0;
-    }
-
-    .navbar-phone {
-        display: flex;
-        justify-content: center;
-        margin-top: 10px;
-    }
-
-    .navbar-phone a {
-        padding: 5px;
-        margin: 0 5px;
-        font-size: 13px;
-    }
-
-    .sign-in-button {
-        margin: 10px 0;
-        display: block;
-    }
-
-    .category-menu {
-        margin-top: 10px;
-    }
-
-    .menu-icon {
-        margin: 0;
-    }
-
-    .dropdown-content {
-        margin-top: 0;
-    }
-}
-=======
->>>>>>> a98145da6d1f0389439b0c93eb812bb1d6915a58
 /*responsif untuk footer*/
     @media (max-width: 768px) {
         .footer-column {
@@ -1706,143 +1672,3 @@ iframe {
 }
 
  /*responsive untuk login*/
-<<<<<<< HEAD
- @media only screen and (min-width: 600px) {
-=======
- @media (max-width: 768px) {
-    .login {
-        width: 80%;
-        height: auto;
-        padding: 30px;
-    }
-
-    .login .avatar {
-        width: 60px;
-        height: 60px;
-        top: -10%;
-        left: calc(50% - 30px);
-    }
-
-    .login h1 {
-        font-size: 18px;
-    }
-
-    .login input {
-        margin-bottom: 15px;
-    }
-
-    .form-input {
-        height: 35px;
-    }
-
-    .login .btn {
-        height: 32px;
-        font-size: 16px;
-    }
-
-    .login a {
-        font-size: 11px;
-        line-height: 18px;
-    }
-
-    .register-link {
-        font-size: 12px;
-        margin-top: 15px;
-    }
-
-    .register-link p a {
-        font-size: 13px;
-    }
-}
-
-/* Tambahan untuk tata letak responsif pada perangkat laptop (lebar 992px) */
-@media (min-width: 769px) and (max-width: 992px) {
->>>>>>> a98145da6d1f0389439b0c93eb812bb1d6915a58
-    .login {
-        max-width: 400px;
-    }
-
-<<<<<<< HEAD
-    .login input {
-        height: 45px;
-    }
-}
-
-/* Media queries for phones */
-@media only screen and (max-width: 480px) {
-    .login {
-        width: 90%;
-    }
-
-    .login h1 {
-        font-size: 16px;
-    }
-
-    .login .btn {
-        font-size: 14px;
-    }
-
-    .login input {
-        height: 35px;
-    }
-}
-
-/* Media queries for laptops and larger screens */
-@media only screen and (min-width: 1200px) {
-    .login {
-        max-width: 600px;
-=======
-    .login .avatar {
-        width: 70px;
-        height: 70px;
-        top: -15%;
-        left: calc(50% - 35px);
->>>>>>> a98145da6d1f0389439b0c93eb812bb1d6915a58
-    }
-
-    .login h1 {
-        font-size: 20px;
-<<<<<<< HEAD
-=======
-        margin-bottom: 20px;
->>>>>>> a98145da6d1f0389439b0c93eb812bb1d6915a58
-    }
-
-    .login input {
-        margin-bottom: 25px;
-    }
-
-    .form-input {
-        height: 40px;
-    }
-
-    .login .btn {
-<<<<<<< HEAD
-        font-size: 18px;
-    }
-
-    .login input {
-        height: 50px;
-    }
-}
-=======
-        height: 35px;
-        font-size: 17px;
-    }
-
-    .login a {
-        font-size: 12px;
-        line-height: 20px;
-    }
-
-    .register-link {
-        font-size: 14px;
-        margin-top: 25px;
-    }
-
-    .register-link p a {
-        font-size: 15px;
-    }
-}
- 
->>>>>>> a98145da6d1f0389439b0c93eb812bb1d6915a58
