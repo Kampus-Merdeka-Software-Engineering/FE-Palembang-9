@@ -1,5 +1,68 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins&display=swap');
-
+/* Menghilangkan margin dan padding pada beberapa elemen kunci */
+html, body, ul, ol, li, form, fieldset, legend {
+    margin:0;
+    padding:0;
+    }
+      
+      
+    /* Menghapus margin top di heading dan paragraf */
+    h1, h2, h3, h4, h5, h6, p {
+    margin-top:0;
+    }
+      
+      
+    /* Menghapus border pada fieldset dan image */
+    fieldset, img {
+    border:0;
+    }
+      
+    /* Mengatur border dan spacing tabel */
+    table {
+    border-collapse:collapse;
+    border-spacing:0;
+    }
+      
+      
+    /* Mengatur caption, header tabel dan data cell tabel */
+    caption, th, td {
+    text-align:left;
+    vertical-align:top;
+    font-weight:normal;
+    }
+      
+      
+    /* Memberikan warna pada fieldset (Mengatasi masalah warna pada IE) */
+    legend {
+    color:#000;
+    }
+      
+      
+    /* Mengatur ukuran font dan ketinggian paragraf pada input, textarea dan select */
+    input, textarea, select {
+    font-size:110%;
+    }
+      
+    /* Menghilangkan list bullet*/
+    li {
+    list-style:none;
+    }
+      
+      
+    /* Mengatur border-bottom dan cursor pada abbr dan acronym */
+    abbr, acronym {
+    border-bottom:.1em dotted;
+    cursor:help;
+    }
+      
+    /* Mengatur vertical-align pada sup dan sub */
+    sup {
+    vertical-align:text-top;
+    }
+      
+    sub {
+    vertical-align:text-bottom;
+    }
 body {
     background:linear-gradient(to top,#0f3462,#09203d, #07182d);
     margin: 0;
@@ -39,6 +102,7 @@ body {
 .logo img {
     max-width: 90px; 
     height: auto;
+    padding-right: 20px;
 }
 
 .navbar-phone{
@@ -49,6 +113,7 @@ body {
 .navbar ul {
     list-style: none;
     display: flex;
+   
 }
 
 .navbar li {
@@ -435,7 +500,8 @@ body {
 }
 
 .introduction p{
-    padding: 0 200px;
+    display: flex;
+    flex-direction: row;
     text-align: center;
     font-size: 20px;
     color: white;
@@ -450,8 +516,9 @@ body {
 
 .mission{
     display: flex;
-    padding: 0 300px;
+    flex-direction: row;
 }
+
 
 
 .vision-caption{
@@ -476,7 +543,7 @@ body {
 
 .vision{
     display: flex;
-    padding: 0 300px;
+    flex-direction: row;
 }
 
 h2{
@@ -527,12 +594,12 @@ h2{
 .banner_container{
     display: flex;
     justify-content: center;
-    align-self: center;
+    
 }
 .main-category .content{
     margin: 0 200px;
     text-align:justify;
-}
+}   
 
 .main-category h3{
     color:#f7941d;
@@ -723,6 +790,7 @@ iframe {
 .main-tips p{
     font-family:cursive;
     color: white;
+    margin-left: 20px;
 }
 
 .tips img{
@@ -1087,6 +1155,7 @@ iframe {
 
     .sign-in-button {
         margin-right: 15px; 
+        display: block;
     }
     .logo img {
         max-width: 90px; 
@@ -1148,6 +1217,7 @@ iframe {
 
     .sign-in-button {
         margin-right: 30px; 
+        display: block;
     }
     .logo img {
         max-width: 90px; 
@@ -1172,6 +1242,7 @@ iframe {
     .sign-in-button {
         margin: 0;
         margin-bottom: 15px; 
+        display: block;
     }
     .logo img {
         max-width: 90px; 
@@ -1193,6 +1264,7 @@ iframe {
         margin-left: 0; 
     }
 }
+
 /*responsif untuk form*/
 @media only screen and (max-width: 599px) {
     .item {
@@ -1238,6 +1310,7 @@ iframe {
 
     .sign-in-button {
         margin: 10px 0;
+        display: block;
     }
 
     .category-menu {
@@ -1332,116 +1405,180 @@ iframe {
 
 /*untuk responsif blog*/
 @media (max-width: 768px) {
+    .judul h2 {
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .judul h3 {
+        margin-left: 0;
+    }
+
     .top-section {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: column-reverse;
+        gap: 20px;
     }
 
     .right-section {
         margin-right: 0;
+        gap: 20px;
     }
 
-    .right-image {
-        margin-top: 20px;
-    }
-}
-
-/* Responsif untuk HP */
-@media (max-width: 480px) {
-    .judul h1 {
-        font-size: 24px;
+    .blog-content {
+        margin: 20px;
     }
 
-    .judul h2 {
-        margin-left: 20px;
+    .blog-image {
+        width: 100%;
+        height: auto;
     }
 
-    .judul h3 {
-        margin-left: 20px;
-        font-size: 18px;
+    .blog-description {
+        margin-left: 0;
     }
 
     .caption {
+        width: 100%;
         font-size: 18px;
+        text-align: center;
+        bottom: 0;
+        padding: 10px 0;
     }
 
-    .top-section img,
-    .right-image img,
-    .left-section img {
-        border-radius: 0; /* Menghilangkan border-radius pada gambar di layar kecil */
+    .blog-caption {
+        font-size: 20px;
     }
+
+    .blog-author {
+        font-size: 16px;
+    }
+    .bottom-section {
+        margin: 3px;
+}
 }
 
-/* Responsif untuk Laptop */
-@media (min-width: 1024px) {
+@media screen and (min-width: 769px) and (max-width: 1024px) { 
     .top-section {
-        gap: 38px;
+        gap: 30px;
     }
 
     .right-section {
-        margin-right: 50px;
+        margin-right: 0;
+        gap: 30px;
     }
 
-    .right-image {
-        margin-top: 0;
+    .blog-content {
+        margin: 30px;
     }
-}
 
-/* Responsif untuk tablet dan laptop */
-@media (min-width: 768px) and (max-width: 1023px) {
-    .judul h2,
-    .judul h3 {
-        margin-left: 20px;
+    .blog-description {
+        margin-left: 0;
     }
-}
-
-/* Responsif untuk HP dan tablet */
-@media (max-width: 1023px) {
     .bottom-section {
-        text-align: center;
+    margin: 10px;
+    .blog-content {
+            margin: 30px;
+            display: flex;
+            flex-direction: row;
+        }
+    
+        .blog-image {
+            width: 350px;
+            height: 200px;
+        }
+    
+        .blog-description {
+            margin-left: 20px;
+        }
     }
 }
-/*responsive untuk about us*/
-@media (max-width: 480px) {
-    .introduction {
-        margin: 0 10px; /* Adjust margin for smaller screens */
-    }
+    
+    /* Tampilan untuk layar ponsel */
+    @media screen and (max-width: 768px) {
+        .blog-content {
+            margin: 20px;
+            flex-direction: column;
+        }
+    
+        .blog-image {
+            width: 100%;
+            height: auto;
+            margin-bottom: 15px;
+        }
+    
+        .blog-description {
+            margin-left: 0;
+        }
+    }   
 
-    .introduction h1 {
-        font-size: 24px; /* Decrease heading font size */
+
+
+/* Tampilan untuk layar ponsel */
+
+
+
+
+
+
+
+
+/*responsive untuk about us*/
+@media only screen and (min-width: 1024px) {
+    .introduction {
+        margin: 0 50px;
     }
 
     .introduction p {
-        padding: 0 10px; /* Adjust padding for smaller screens */
-        font-size: 16px; /* Decrease font size */
+        padding: 0 100px;
     }
 
-    .content {
-        margin-top: 20px; /* Adjust spacing for smaller screens */
-        padding: 20px 0; /* Adjust padding for smaller screens */
+    .mission,
+    .vision {
+        padding: 0 200px;
     }
 
-    .content h2 {
-        font-size: 22px; /* Decrease heading font size */
+    .vision-caption {
+        margin: 0 50px;
+    }
+}
+
+/* Media Queries for Tablet (768px) */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .introduction {
+        margin: 0 30px;
     }
 
-    .content p {
-        font-size: 14px; /* Decrease paragraph font size */
+    .introduction p {
+        padding: 0 50px;
     }
 
-    .profile-card {
-        width: 140px; /* Adjust card width for smaller screens */
+    .mission,
+    .vision {
+        padding: 0 100px;
     }
 
-    .profile-picture {
-        width: 80px; /* Adjust profile picture size for smaller screens */
-        height: 80px;
-        margin-bottom: 15px; /* Adjust margin for smaller screens */
+    .vision-caption {
+        margin: 0 30px;
+    }
+}
+
+/* Media Queries for Mobile (480px) */
+@media only screen and (max-width: 479px) {
+    .introduction {
+        margin: 0 10px;
     }
 
-    .profile-picture img {
-        width: 80px;
-        height: 80px;
+    .introduction p {
+        padding: 0 10px;
+    }
+
+    .mission,
+    .vision {
+        padding: 0 20px;
+    }
+
+    .vision-caption {
+        margin: 0 10px;
     }
 }
 /*responsif untuk category*/
@@ -1561,34 +1698,50 @@ iframe {
 }
 
  /*responsive untuk login*/
- @media only screen and (min-width: 769px) and (max-width: 1024px) {
+ @media only screen and (min-width: 600px) {
     .login {
-        width: 60%;
-        padding: 40px;
+        max-width: 400px;
     }
 
-    .login .avatar {
-        width: 90px;
-        height: 90px;
-        top: -12%;
-        left: calc(50% - 45px);
+    .login input {
+        height: 45px;
+    }
+}
+
+/* Media queries for phones */
+@media only screen and (max-width: 480px) {
+    .login {
+        width: 90%;
+    }
+
+    .login h1 {
+        font-size: 16px;
+    }
+
+    .login .btn {
+        font-size: 14px;
+    }
+
+    .login input {
+        height: 35px;
+    }
+}
+
+/* Media queries for laptops and larger screens */
+@media only screen and (min-width: 1200px) {
+    .login {
+        max-width: 600px;
     }
 
     .login h1 {
         font-size: 20px;
-        margin-bottom: 15px;
-    }
-
-    .login input {
-        margin-bottom: 20px;
     }
 
     .login .btn {
-        font-size: 16px;
+        font-size: 18px;
     }
 
-    .register-link {
-        font-size: 14px;
-        margin-top: 15px;
+    .login input {
+        height: 50px;
     }
 }
