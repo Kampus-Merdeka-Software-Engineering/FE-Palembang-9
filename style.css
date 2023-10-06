@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins&display=swap');
 /* Menghilangkan margin dan padding pada beberapa elemen kunci */
--html, body, ul, ol, li, form, fieldset, legend {
+.html, body, ul, ol, li, form, fieldset, legend {
     margin:0;
     padding:0;
     }
@@ -95,7 +95,7 @@ body {
 .left-section {
     display: flex; 
     align-items: center;
-    margin-left: 50px;
+    /*marginleft50px*/
 }
 
 /* Logo styles */
@@ -546,6 +546,7 @@ body {
 .vision{
     display: flex;
     flex-direction: row;
+    margin-right: 100px;
 }
 
 h2{
@@ -596,9 +597,6 @@ h2{
 .banner_container{
     display: flex;
     justify-content: center;
-
-    align-items: center;
-
 }
 .main-category .content{
     margin: 0 200px;
@@ -1150,24 +1148,273 @@ iframe {
 	color: #fff;
 	padding: 30px;
   }
-
- /*responsif untuk navigasi*/
- @media only screen and (min-width: 600px) and (max-width: 1024px) {
+/*rsponsive untuk navigasi*/
+@media only screen and (min-width: 600px) and (max-width: 1023px) {
     .navbar li {
-        margin-right: 20px; /* untuk tablet */
-    }
-
-    .navbar a {
-        font-size: 13px; 
+        margin-right: 0.75rem;
     }
 
     .sign-in-button {
-        margin-right: 15px; 
-        display: block;
+        padding: 10px;
+        margin-right: 0.75rem;
     }
+}
+
+/* Media query for mobile screens */
+@media only screen and (max-width: 599px) {
+    .left-section {
+        margin-left: 0.5rem;
+    }
+
     .logo img {
-        max-width: 90px; 
+        max-width: 5rem;
+        padding-right: 0.5rem;
     }
+
+    .navbar li {
+        margin-right: 0.5rem;
+    }
+
+    .sign-in-button {
+        padding: 10px;
+        margin-right: 0.5rem;
+        display: block; /* Adjusted for mobile screens */
+        width: 100%; /* Make the button take full width */
+        margin-top: 1rem; /* Add some top margin for better spacing */
+    }
+}
+
+/* Media query for laptops */
+@media only screen and (min-width: 1024px) and (max-width: 1439px) {
+    .left-section {
+        margin-left: 1.5rem; /* Adjusted for medium-sized screens */
+    }
+
+    .logo img {
+        max-width: 8rem; /* Adjusted for medium-sized screens */
+        padding-right: 1.5rem; /* Adjusted for medium-sized screens */
+    }
+
+    .navbar li {
+        margin-right: 1.5rem; /* Adjusted for medium-sized screens */
+    }
+
+    .sign-in-button {
+        padding: 1.25rem 2rem; /* Adjusted for medium-sized screens */
+        margin-right: 2rem; /* Adjusted for medium-sized screens */
+    }
+
+    /* Additional style for larger screens */
+    .sign-in-button {
+        display: block; /* Changed to block for larger screens */
+        width: 100%; /* Make the button take full width */
+        margin-right: 0; /* Remove margin for larger screens */
+    }
+}
+
+/* Media query for larger screens */
+@media only screen and (min-width: 1440px) {
+    .left-section {
+        margin-left: 2rem;
+    }
+
+    .logo img {
+        max-width: 9rem;
+        padding-right: 2rem;
+    }
+
+    .navbar li {
+        margin-right: 2rem;
+    }
+
+    .sign-in-button {
+      display: inline-block;
+    }
+}
+@media only screen and (max-width: 399px) {
+    .left-section {
+        margin-left: 0.5rem;
+    }
+
+    .logo img {
+        max-width: 4rem;
+        padding-right: 0.5rem;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar li {
+        margin: 0.5rem 0;
+        margin-right: 0;
+    }
+    .navbar ul {
+        display: block;
+        list-style: none;
+        margin-left: 20px;
+        margin-right: 11px;
+    }
+
+    .sign-in-button {
+        padding: 10px;
+        margin-right: 0;
+        margin-top: 1rem;
+        width: 100%;
+    }
+}
+
+/* Media query for small screens */
+@media only screen and (min-width: 400px) and (max-width: 599px) {
+    .left-section {
+        margin-left: 0.75rem;
+    }
+
+    .logo img {
+        max-width: 4.5rem;
+        padding-right: 0.75rem;
+    }
+
+    .navbar li {
+        margin-right: 0.5rem;
+        margin-top: 4px;
+        margin-bottom: 2px;
+    }
+
+    .sign-in-button {
+        padding: 1.25rem 1.5rem;
+        margin-right: 0.5rem;
+    }
+    .navbar ul {
+        display: block;
+        margin-left:50px;
+        list-style: none;
+    }
+}
+/* Media query untuk layar berukuran 600px - 799px */
+@media only screen and (min-width: 600px) and (max-width: 799px) {
+    .left-section {
+        margin-left: 1rem;
+    }
+
+    .logo img {
+        max-width: 6rem;
+        padding-right: 1rem;
+    }
+
+    .navbar {
+        /* Aturan khusus untuk navbar pada lebar layar tertentu */
+    }
+
+    .navbar ul {
+        display:flex; /* Menyusun menu ke kiri */
+    }
+
+    .navbar li {
+        margin: 0.5rem 0; /* Margin atas dan bawah */
+        margin-right: 0; /* Reset margin kanan */
+    }
+
+    .sign-in-button {
+        padding: 1rem 1.5rem;
+        margin-right: 0.75rem;
+    }
+
+    /* Aturan tambahan untuk elemen-elemen lain yang perlu disesuaikan */
+    .additional-element {
+        /* Sesuaikan aturan tambahan lainnya */
+    }
+
+    /* Contoh aturan tambahan untuk menyembunyikan elemen tertentu */
+    .hidden-element {
+        display: none;
+    }
+}
+
+/* Media query for tablets */
+@media only screen and (min-width: 600px) and (max-width: 1023px) {
+    .navbar li {
+        margin-right: 0.75rem;
+    }
+
+    .sign-in-button {
+        padding: 1rem 1.5rem;
+        margin-right: 0.75rem;
+    }
+}
+
+/* Media query for mobile screens */
+@media only screen and (min-width: 320px) and (max-width: 399px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar li {
+        margin: 0.5rem 0;
+        margin-right: 0;
+    }
+
+    .sign-in-button {
+        padding: 1rem;
+        margin-right: 0;
+        margin-top: 1rem;
+        width: 100%;
+    }
+}
+
+/* Media query for laptops */
+
+@media only screen and (min-width: 1024px) and (max-width: 1439px) {
+    .left-section {
+        margin-left: 1.5rem; /* Adjusted for medium-sized screens */
+    }
+
+    .logo img {
+        max-width: 8rem; /* Adjusted for medium-sized screens */
+        padding-right: 1.5rem; /* Adjusted for medium-sized screens */
+    }
+
+    .navbar li {
+        margin-right: 1.5rem; /* Adjusted for medium-sized screens */
+    }
+
+    .sign-in-button {
+        padding: 1.25rem 2rem; /* Adjusted for medium-sized screens */
+        margin-right: 2rem; /* Adjusted for medium-sized screens */
+    }
+
+    /* Additional style for larger screens */
+    .sign-in-button {
+        display: block; /* Changed to block for larger screens */
+        width: 100%; /* Make the button take full width */
+        margin-right: 0; /* Remove margin for larger screens */
+    }
+}
+/* Media query for larger screens */
+@media only screen and (min-width: 1440px) {
+    .left-section {
+        margin-left: 2rem;
+    }
+
+    .logo img {
+        max-width: 9rem;
+        padding-right: 2rem;
+    }
+
+    .navbar li {
+        margin-right: 2rem;
+    }
+
+    .sign-in-button {
+        padding: 1.5rem 2.5rem;
+        margin-right: 3rem;
+    }
+}
+ /*responsif untuk home*/
+ @media only screen and (min-width: 600px) and (max-width: 1024px) {
+    
     .main-home .content {
         width: 80%; 
     }
@@ -1184,9 +1431,7 @@ iframe {
         margin-bottom: 8px; 
         margin-left: 15px; 
     }
-    .logo img {
-        max-width: 90px;
-    }
+   
 }
 @media only screen and (min-width: 768px)  {
     .main-home .content {
@@ -1205,60 +1450,10 @@ iframe {
         margin-bottom: 10px; 
         margin-left: 18px; 
     }
-    .logo img {
-        max-width: 90px;
-        
-    }
-    .sign-in-button {
-        margin-right: 30px; 
-        display: block;
-    }
+    
 }
-
-
-
-/* Media query for laptop/desktop screens */
-@media only screen and (min-width: 1025px) {
-    .navbar li {
-        margin-right: 50px; 
-    }
-
-    .navbar a {
-        font-size: 15px; 
-    }
-
-    .sign-in-button {
-        margin-right: 30px; 
-        display: block;
-    }
-    .logo img {
-        max-width: 90px; 
-    }
-}
-
 /* Media query for mobile screens */
 @media only screen and (max-width: 599px) {
-    .navbar {
-        flex-direction: column; 
-    }
-
-    .navbar li {
-        margin: 0;
-        margin-bottom: 10px; 
-    }
-
-    .navbar a {
-        font-size: 14px; 
-    }
-
-    .sign-in-button {
-        margin: 0;
-        margin-bottom: 15px; 
-        display: block;
-    }
-    .logo img {
-        max-width: 90px; 
-    }
     .main-home .content {
         width: 90%; 
     }
@@ -1293,12 +1488,11 @@ iframe {
 }
 
 /* Media query for large screens */
-@media only screen and (min-width: 1025px) {
+@media only screen and (min-width: 1025px) {}
     .item {
         width: 30%;
     }
-}
-
+    
 /*responsif untuk footer*/
     @media (max-width: 768px) {
         .footer-column {
@@ -1431,7 +1625,7 @@ iframe {
 }
 }
 
-@media screen and (min-width: 769px) and (max-width: 1024px) { 
+@media screen and (min-width: 769px) and (max-width: 1024px) {
     .top-section {
         gap: 30px;
     }
@@ -1443,29 +1637,20 @@ iframe {
 
     .blog-content {
         margin: 30px;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .blog-image {
+        width: 350px;
+        height: 200px;
     }
 
     .blog-description {
-        margin-left: 0;
-    }
-    .bottom-section {
-    margin: 10px;
-    .blog-content {
-            margin: 30px;
-            display: flex;
-            flex-direction: row;
-        }
-    
-        .blog-image {
-            width: 350px;
-            height: 200px;
-        }
-    
-        .blog-description {
-            margin-left: 20px;
-        }
+        margin-left: 20px;
     }
 }
+
     
     /* Tampilan untuk layar ponsel */
     @media screen and (max-width: 768px) {
@@ -1548,12 +1733,14 @@ iframe {
 
     .mission,
     .vision {
-        padding: 0 20px;
+        display: flex;
+        flex-direction: row;
     }
 
     .vision-caption {
         margin: 0 10px;
     }
+    
 }
 /*responsif untuk category*/
 @media (max-width: 768px) {
@@ -1671,4 +1858,4 @@ iframe {
     }
 }
 
- /*responsive untuk login*/
+ 
