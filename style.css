@@ -360,7 +360,7 @@ body {
     position:relative;
     display: flex;
     gap: 38px;
-    margin-left: auto;
+    margin-left: 30px;
     margin-right: auto ;
 }
 
@@ -1251,7 +1251,7 @@ iframe {
         margin-right: 0;
     }
     .navbar ul {
-        display: block;
+        display: none;
         list-style: none;
         margin-left: 20px;
         margin-right: 11px;
@@ -1290,6 +1290,7 @@ iframe {
         display: block;
         margin-left:50px;
         list-style: none;
+        display: none;
     }
 }
 /* Media query untuk layar berukuran 600px - 799px */
@@ -1341,6 +1342,7 @@ iframe {
     .sign-in-button {
         padding: 1rem 1.5rem;
         margin-right: 0.75rem;
+        display: none;
     }
 }
 
