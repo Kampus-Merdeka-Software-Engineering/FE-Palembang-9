@@ -41,14 +41,8 @@
     </div>
 
     <script>
-      // ampe abis kopi
-      const url = "https://fretful-pie-production.up.railway.app/User/Login";
-
-      // const axiosConfig = {
-      //   headers: {
-      //     "Content-Type": "application/json", // Atur Content-Type ke application/json
-      //   },
-      // };
+    
+      const url = "http://localhost:8000/User/Login";
 
       const form = document.getElementById("loginForm");
 
@@ -66,7 +60,7 @@
         axios
           .post(url, data)
           .then(function (response) {
-            window.location.href = 'http://localhost:5501/'
+            window.location.href = '/index.html'
           })
           .catch(function (error) {
             console.error("Error:", error);
