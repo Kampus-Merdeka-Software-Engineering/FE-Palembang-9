@@ -1,24 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <title>Webpage Design</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
-<body class="log">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body class="log">
     <div class="login">
-        <h1>Registrasi</h1>
-        <form action="login.html" method="post">
-            <div class="input-group"><input type="text" placeholder="Nama" name="nama"></div>
-            <div class="input-group"><input type="text" placeholder="Username" name="username"></div>
-            <div class="input-group"><input type="text" placeholder="Password" name="password"></div>
-            <div class="input-group"><input type="text" placeholder="Re-Password" name="re-password"></div>
-            <input type="submit" class="btn" value="Registrasi">
-            <div class="register-link">
-                <p>Back to <a href="login.html">Login</a></p>
-            </div>
-        </form>
+      <h1>Registrasi</h1>
+      <form method="post" id="loginForm">
+        <div class="input-group">
+          <input type="text" placeholder="Nama" id="nama" name="nama" />
+        </div>
+        <div class="input-group">
+          <input type="text" placeholder="Username" id="user" name="username" />
+        </div>
+        <div class="input-group">
+          <input
+            type="text"
+            placeholder="Password"
+            id="password"
+            name="password"
+          />
+        </div>
+        <input type="submit" class="btn" value="Registrasi" />
+        <div class="register-link">
+          <p>Back to <a href="login.html">Login</a></p>
+        </div>
+      </form>
     </div>
-</body>
 
+    <script>
+      // ampe abis kopi
+      const url = "http://localhost:8000/User/RegistrationUser";
+
+      // const axiosConfig = {
+      //   headers: {
+      //     "Content-Type": "application/json", // Atur Content-Type ke application/json
+      //   },
+      // };
+
+      const form = document.getElementById("loginForm");
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const usernameInput = document.getElementById("user");
+        const passwordInput = document.getElementById("password");
+        const namaInput = document.getElementById("nama");
+
+        const data = {
+          name: namaInput.value,
+          username: usernameInput.value,
+          password: passwordInput.value
+        };
+
+        axios
+          .post(url, data)
+          .then(function (response) {
+            window.location.href = "http://localhost:5501/";
+          })
+          .catch(function (error) {
+            console.error("Error:", error);
+          });
+      });
+    </script>
+  </body>
 </html>

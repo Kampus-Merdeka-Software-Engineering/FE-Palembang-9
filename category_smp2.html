@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 <body>
     <header class="galaxy-header">
@@ -44,12 +45,12 @@
 
     <div class="main-category">
     <div class="judul">
-        <h1>Sekolah Menengah Pertama (SMP)</h1>
+        <h1 id="title"></h1>
         <h2 class="letters">Asking and Giving Attention</h2>
     </div>
     <script src="js/script.kategori.js" type="text/javascript"></script>
     <div class="banner_container">
-        <iframe src="https://www.youtube.com/embed/TvSeWOj0R20?si=zcPBbnmsx3EZQEeA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe src=""" id="link" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
     <div class="content">
         <h3>Asking and Giving Attention </h3>
@@ -105,5 +106,29 @@
             <p>&copy; 2023 English Galaxy. All Rights Reserved.</p>
         </div>
     </footer>
+
+    <script>
+        // ampe abis kopi
+        const url = "http://localhost:8000/Video/getVideo/4";
+            axios
+            .get(url)
+            .then(function (response) {
+                const data = response.data;
+
+                const videoTitle = data.video.category.tittle;
+                const videoLink = data.video.link_video;
+
+                const titleElement = document.getElementById("title");
+                titleElement.innerHTML = videoTitle;
+
+                const linkElement = document.getElementById("link");
+                linkElement.src = videoLink;
+
+                console.log(data);
+            })
+            .catch(function (error) {
+                console.error("Error:", error);
+            });
+    </script>
 </body>
 </html>

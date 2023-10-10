@@ -7,18 +7,27 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   </head>
 
   <body class="log">
     <div class="login">
       <img src="profil.png" class="avatar" />
       <h1>Login</h1>
-      <form action="index.html" method="post">
+      <form method="post" id="loginForm">
         <p>Username</p>
-        <input type="text" class="form-input" placeholder="Enter Email" />
+        <input
+          id="userInput"
+          type="text"
+          name="userInput"
+          class="form-input"
+          placeholder="Enter Email"
+        />
         <p>Password</p>
         <input
+          id="passwordInput"
           type="password"
+          name="passwordInput"
           class="form-input"
           placeholder="Enter Password"
         />
@@ -28,8 +37,41 @@
           <a href="index.html">Back</a>
         </div>
         <script src="js/script.js" type="text/javascript"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.1/axios.min.js"></script>
       </form>
     </div>
+
+    <script>
+      // ampe abis kopi
+      const url = "http://localhost:8000/User/Login";
+
+      // const axiosConfig = {
+      //   headers: {
+      //     "Content-Type": "application/json", // Atur Content-Type ke application/json
+      //   },
+      // };
+
+      const form = document.getElementById("loginForm");
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const usernameInput = document.getElementById("userInput");
+        const passwordInput = document.getElementById("passwordInput");
+
+        const data = {
+          user: usernameInput.value,
+          pass: passwordInput.value
+        };
+
+        axios
+          .post(url, data)
+          .then(function (response) {
+            window.location.href = 'http://localhost:5501/'
+          })
+          .catch(function (error) {
+            console.error("Error:", error);
+          });
+      });
+    </script>
   </body>
 </html>
