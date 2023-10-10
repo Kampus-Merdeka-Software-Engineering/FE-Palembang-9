@@ -15,7 +15,7 @@
       <img src="profil.png" class="avatar" />
       <h1>Login</h1>
       <form method="post" id="loginForm">
-        <p>Username</p>
+        <p>Email</p>
         <input
           id="userInput"
           type="text"
@@ -60,9 +60,11 @@
         axios
           .post(url, data)
           .then(function (response) {
+            alert('login sukses');
             window.location.href = '/index.html'
           })
           .catch(function (error) {
+            alert('Username atau Password Salah');
             console.error("Error:", error);
           });
       });
